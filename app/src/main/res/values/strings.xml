@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Sports Companion</string>
-    <string name="home_page_line">CHOOSE YOUR FAVORITE SPORT</string>
+    <string name="home_page_line">Choose Your Favorite Sport</string>
     <string name="sport1">FOOTBALL</string>
     <string name="sport2">CRICKET</string>
     <string name="sport3">VOLLEYBALL</string>

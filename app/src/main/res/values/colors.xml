@@ -4,8 +4,11 @@
     <color name="dark_mode">#121212</color>
     <color name="white">#FFFFFFFF</color>
     <color name="card_color">#1a1a1a</color>
-    <color name="gray">#808080</color>
+    <color name="gray">#f2f2f2</color>
     <color name="purple">#B378D3</color>
+    <color name="blue_card_dark">#0066FF</color>
+    <color name="blue_card_light">#D6E4FD</color>
     <color name="green">#86DC3D</color>
     <color name="nav_bar">#faf7f7</color>
+    <color name="small_text">#969696</color>
 </resources>
