@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Sports Companion</string>
+    <string name="home_page_line">CHOOSE YOUR FAVORITE SPORT</string>
+    <string name="sport1">FOOTBALL</string>
+    <string name="sport2">CRICKET</string>
+    <string name="sport3">VOLLEYBALL</string>
+    <string name="sport4">MARATHON</string>
+    <string name="sport5">TABLE TENNIS</string>
+    <string name="sport6">TENNIS</string>
+    <string name="famous_places">FAMOUS PLACES NEAR YOUR AREA</string>
+    <string name="football_pitch_noida">FOOTBALL ARENA, NOIDA</string>
+    <string name="football_pitch_noida_desc">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna. Ut enim ad minim…</string>
+    <string name="looking_for_company">LOOKING FOR COMPANION…</string>
+    <string name="host_sport">Host For Companion</string>
+    <string name="join_sport">Join As Companion</string>
+    <string name="table_tennis_faridabad">UNIFIED TABLE TENNIS, FARIDABAD</string>
+    <string name="tennis_delhi">DDA TENNIS COURT, DELHI</string>
+    <string name="join">Join</string>
+    <string name="book">Book</string>
+    <string name="upcoming_events">UPCOMING EVENTS IN YOUR AREA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_profile_fragment">Profile</string>
+    <string name="hello_settings_fragment">Settings</string>
+    <string name="hello_play_fragment">Play</string>
+</resources>

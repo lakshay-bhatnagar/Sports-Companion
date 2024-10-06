@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_mode"
+    tools:context=".PlayFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_mode"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/looking_for_company"
+            android:layout_marginStart="15dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            app:cardElevation="8dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="60dp"
+            app:cardBackgroundColor="@color/purple">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="26sp"
+                android:text="@string/host_sport"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/purple"
+                android:text="@string/book"
+                android:textSize="20sp"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            app:cardElevation="8dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/green">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="26sp"
+                android:text="@string/join_sport"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/green"
+                android:text="@string/join"
+                android:textSize="20sp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:text="@string/upcoming_events"
+            android:layout_marginStart="15dp"/>
+
+    </LinearLayout>
+</FrameLayout>
