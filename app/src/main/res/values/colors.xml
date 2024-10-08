@@ -8,7 +8,11 @@
     <color name="purple">#B378D3</color>
     <color name="blue_card_dark">#0066FF</color>
     <color name="blue_card_light">#D6E4FD</color>
+    <color name="dark_card_background">#1E1E1E</color>
+    <color name="light_text_color">#F5F5F5</color>
     <color name="green">#86DC3D</color>
     <color name="nav_bar">#faf7f7</color>
     <color name="small_text">#969696</color>
+    <color name="tab_unselected_color">#B0B0B0</color> <!-- Light Gray -->
+    <color name="tab_selected_color">#000000</color> <!-- Black -->
 </resources>

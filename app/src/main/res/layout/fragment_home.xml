@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:background="@color/dark_mode"
         android:layout_marginTop="40dp"
+        android:scrollbars="none"
         xmlns:app="http://schemas.android.com/apk/res-auto">
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,11 +59,72 @@
                 android:queryHint="Search your sport here..."
                 android:iconifiedByDefault="false"/>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="250dp"
+                app:cardBackgroundColor="@color/dark_card_background"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+                    
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tab_today_card"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:padding="10dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardElevation="4dp">
+
+                        <TextView
+                            android:id="@+id/tab_today_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Today"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:textColor="@color/black"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tab_weekly_card"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        app:cardCornerRadius="20dp"
+                        android:padding="10dp"
+                        app:cardBackgroundColor="@color/dark_card_background"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:id="@+id/tab_weekly_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Weekly"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:padding="10dp"
+                            android:textColor="@color/light_text_color"/>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
             <GridLayout
                 android:id="@+id/gridLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="15dp"
                 android:rowCount="2"
                 android:layout_gravity="center"
                 android:columnCount="2"
@@ -87,7 +149,8 @@
                             android:layout_height="wrap_content"
                             android:text="Calories"
                             android:textSize="22sp"
-                            android:textStyle="bold"
+                            android:id="@+id/card_calorie_text"
+                            android:fontFamily="@font/sf_pro_display_semibold"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
                             android:layout_marginStart="13dp"
@@ -112,21 +175,21 @@
                             android:textColor="@color/black"
                             android:id="@+id/caloriesNumber"
                             android:textSize="22sp"
-                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_semibold"
                             android:layout_alignParentStart="true"
-                            android:layout_alignParentBottom="true"
+                            android:layout_alignTop="@id/card_calorie_text"
                             android:layout_marginStart="13dp"
-                            android:layout_marginBottom="10dp"/>
+                            android:layout_marginTop="100dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="cal"
-                            android:textColor="@color/small_text"
                             android:textSize="11sp"
-                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_light"
                             android:layout_toEndOf="@id/caloriesNumber"
                             android:layout_alignBottom="@id/caloriesNumber"
+                            android:layout_marginBottom="10dp"
                             android:layout_marginStart="5dp"/>
 
                     </RelativeLayout>
@@ -154,7 +217,8 @@
                             android:layout_height="wrap_content"
                             android:text="Protein"
                             android:textSize="22sp"
-                            android:textStyle="bold"
+                            android:id="@+id/card_protein_text"
+                            android:fontFamily="@font/sf_pro_display_semibold"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
                             android:layout_marginStart="13dp"
@@ -179,11 +243,11 @@
                             android:textColor="@color/white"
                             android:id="@+id/proteinNumber"
                             android:textSize="22sp"
-                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_semibold"
                             android:layout_alignParentStart="true"
-                            android:layout_alignParentBottom="true"
+                            android:layout_alignTop="@id/card_protein_text"
                             android:layout_marginStart="13dp"
-                            android:layout_marginBottom="10dp"/>
+                            android:layout_marginTop="100dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -191,9 +255,10 @@
                             android:text="g"
                             android:textColor="@color/small_text"
                             android:textSize="11sp"
-                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_light"
                             android:layout_toEndOf="@id/proteinNumber"
                             android:layout_alignBottom="@id/proteinNumber"
+                            android:layout_marginBottom="10dp"
                             android:layout_marginStart="5dp"/>
 
                     </RelativeLayout>
@@ -220,8 +285,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Carbs"
+                            android:id="@+id/card_carb_text"
                             android:textSize="22sp"
-                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_semibold"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
                             android:layout_marginStart="13dp"
@@ -246,11 +312,11 @@
                             android:textColor="@color/white"
                             android:id="@+id/carbsNumber"
                             android:textSize="22sp"
-                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_semibold"
                             android:layout_alignParentStart="true"
-                            android:layout_alignParentBottom="true"
+                            android:layout_alignTop="@id/card_carb_text"
                             android:layout_marginStart="13dp"
-                            android:layout_marginBottom="10dp"/>
+                            android:layout_marginTop="100dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -258,9 +324,10 @@
                             android:text="g"
                             android:textColor="@color/small_text"
                             android:textSize="11sp"
-                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_light"
                             android:layout_toEndOf="@id/carbsNumber"
                             android:layout_alignBottom="@id/carbsNumber"
+                            android:layout_marginBottom="10dp"
                             android:layout_marginStart="5dp"/>
 
                     </RelativeLayout>
@@ -285,11 +352,12 @@
                         android:layout_height="wrap_content"
                         android:background="@color/blue_card_light">
                         <TextView
+                            android:id="@+id/card_fat_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Fat"
                             android:textSize="22sp"
-                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_semibold"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
                             android:layout_marginStart="13dp"
@@ -314,11 +382,11 @@
                             android:textColor="@color/black"
                             android:id="@+id/fatNumber"
                             android:textSize="22sp"
-                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_semibold"
                             android:layout_alignParentStart="true"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginStart="13dp"
-                            android:layout_marginBottom="10dp"/>
+                            android:layout_alignTop="@id/card_fat_text"
+                            android:layout_marginTop="100dp"
+                            android:layout_marginStart="13dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -326,9 +394,10 @@
                             android:text="g"
                             android:textColor="@color/small_text"
                             android:textSize="11sp"
-                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_light"
                             android:layout_toEndOf="@id/fatNumber"
                             android:layout_alignBottom="@id/fatNumber"
+                            android:layout_marginBottom="10dp"
                             android:layout_marginStart="5dp"/>
 
                     </RelativeLayout>
@@ -341,7 +410,7 @@
                 android:text="Track Calories"
                 android:layout_marginStart="25dp"
                 android:textSize="28sp"
-                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_display_bold"
                 android:textColor="@color/white"
                 android:layout_marginTop="25dp"/>
 
@@ -366,7 +435,7 @@
                         android:text="Calories Eaten"
                         android:textColor="@color/white"
                         android:textSize="17sp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/sf_pro_display_semibold"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:id="@+id/addCalorieText"
@@ -410,7 +479,7 @@
                         android:text="Calories Burned"
                         android:textColor="@color/white"
                         android:textSize="17sp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/sf_pro_display_semibold"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:id="@+id/addExerciseText"
@@ -439,7 +508,7 @@
                 android:text="Streaks"
                 android:textColor="@color/white"
                 android:textSize="28sp"
-                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_display_bold"
                 android:layout_marginStart="25dp"/>
 
             <androidx.cardview.widget.CardView
@@ -473,13 +542,12 @@
                         android:textSize="22sp"
                         android:text="21"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/sf_pro_display_semibold"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="5dp"
                         android:layout_marginStart="85dp"/>
                 </RelativeLayout>
-
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
