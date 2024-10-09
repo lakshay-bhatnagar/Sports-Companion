@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_mode"
+    tools:context=".AddCalories">
+
+    <TextView
+        android:id="@+id/track_calorie_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="112dp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="Track your calories"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="@id/main"
+        app:layout_constraintTop_toTopOf="@id/main" />
+
+    <EditText
+        android:id="@+id/track_calorie_edttxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:gravity="center"
+        android:hint="Add calories eaten"
+        android:inputType="number"
+        android:textColor="#ffffff"
+        android:textColorHint="#808080"
+        app:layout_constraintLeft_toLeftOf="@id/main"
+        app:layout_constraintTop_toTopOf="@id/track_calorie_text" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/track_calorie_edttxt"
+        app:layout_constraintLeft_toLeftOf="@id/track_calorie_edttxt"
+        app:cardCornerRadius="5dp"
+        android:elevation="5dp"
+        android:layout_marginStart="53dp"
+        app:cardBackgroundColor="#0874F2"
+        android:layout_marginTop="60dp"
+        android:id="@+id/add_calories_btn">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Track Calories"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
